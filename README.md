@@ -1,16 +1,18 @@
+
+
 ### 1. Dataset Preparation for Large-scale Experiment
 
 #### In-distribution dataset
 
-**Please download **[ImageNet-1k](http://www.image-net.org/challenges/LSVRC/2012/index)**and place the training data and validation data in**
+**Please download **[ImageNet-1k](http://www.image-net.org/challenges/LSVRC/2012/index) **and place the training data and validation data in**
 
 `./data/ilsvrc2012/train` and  `/data/ilsvrc2012/val`, respectively.
 
 #### Out-of-distribution dataset
 
 **We have 4 OOD datasets from **
-[iNaturalist](https://arxiv.org/pdf/1707.06642.pdf), **
-****[SUN](https://vision.princeton.edu/projects/2010/SUN/paper.pdf), **
+[iNaturalist](https://arxiv.org/pdf/1707.06642.pdf), 
+**[SUN](https://vision.princeton.edu/projects/2010/SUN/paper.pdf), **
 **[Places](http://places2.csail.mit.edu/PAMI_places.pdf), **
 **and [Textures](https://arxiv.org/pdf/1311.3618.pdf), **
 **and de-duplicated concepts overlapped with ImageNet-1k.**
@@ -31,7 +33,7 @@ wget http://pages.cs.wisc.edu/~huangrui/imagenet_ood_dataset/Places.tar.gz
 
 #### Pre-trained model
 
-**Use pre-trained resnet50 and mobilenetv2 model.**
+Use pre-trained resnet50 and mobilenetv2 model.
 
 ### 2. Dataset Preparation for CIFAR Experiment
 
@@ -60,7 +62,7 @@ tar -xvzf LSUN.tar.gz
 
 ### 3. Pre-trained Model Preparation
 
-**$$****For CIFAR, the model we used is in the checkpoints folder. **
+$$**For CIFAR, the model we used is in the checkpoints folder. **
 
 **For ImageNet, the model we used in the paper is the pre-trained ResNet-50 and MobileNetv2 provided by Pytorch. The download process**
 **will start upon running.**
@@ -80,9 +82,11 @@ tar -xvzf LSUN.tar.gz
 
 **CIFAR-10/CIFAR-100 with DenseNet:**
 
-```
+```shell
 sh scripts/run_precompute.sh CIFAR-10/CIFAR-100 densenet
 ```
+
+
 
 ## Demo
 
@@ -92,9 +96,11 @@ sh scripts/run_precompute.sh CIFAR-10/CIFAR-100 densenet
 
 **CIFAR-10/CIFAR-100 with DenseNet:**
 
-```
+```shell
 sh scripts/run_eval.sh CIFAR-10/CIFAR-100 densenet HIMPLoS 60 1.6
 ```
+
+
 
 ### 2. Demo code for my CIFAR Experiment
 
@@ -102,6 +108,7 @@ sh scripts/run_eval.sh CIFAR-10/CIFAR-100 densenet HIMPLoS 60 1.6
 
 **ImageNet with ResNet-50:**
 
-```
+```shell
 sh scripts/run_eval.sh imagenet resnet50 HIMPLoS 30 0.8
 ```
+
